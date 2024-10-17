@@ -44,5 +44,5 @@ levels(survey_base$species_id)
 
 survey_base[complete.cases(survey_base), ]
 
-# a factor is different from a character because it turns the character into an integer, with labels attached instead of just a number.
+# 4. a factor is different from a character because it turns the character into an integer, with labels attached instead of just a number.
 
