@@ -20,7 +20,7 @@ head(surveys$hindfoot_cat) #Shows head of object
 
 head(surveys$hindfoot_length)
 
-surveys$hindfoot_length <- ifelse(surveys$hindfoot_length < mean(surveys$hindfoot_length, na.rm = TRUE), yes= "small", no = "big")
+surveys$hindfoot_cat <- ifelse(surveys$hindfoot_length < mean(surveys$hindfoot_length, na.rm = TRUE), yes= "small", no = "big")
 #also sets conditional statement using more robust coding, calculating the mean. also removes NAs and sets conditions.
 
 head(surveys$hindfoot_length)
@@ -44,7 +44,7 @@ surveys %>%
     hindfoot_length > 31.5 ~ "big",
     hindfoot_length > 29 ~ "medium",
     is.na(hindfoot_length) ~ NA_character_, 
-    TRUE ~ "small",
+    TRUE ~ "small", #true goes through all lines, and labels everything left thats not big or medium. 
   )) %>% 
   select(hindfoot_length, hindfoot_cat) %>% 
   group_by(hindfoot_cat) %>% 

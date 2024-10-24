@@ -25,7 +25,7 @@ biggest_critters <- surveys %>%
 surveys %>% 
   filter(!is.na(weight)) %>% 
   group_by(sex, species_id) %>% 
-  summarize(max_weight = max(weight, na.rm = TRUE)) %>% 
+  summarize(max_weight = max(weight, na.rm = TRUE)) %>% #you can add multiple columns to summarize
   arrange(-max_weight)
 
 #above shows from the highest weight
