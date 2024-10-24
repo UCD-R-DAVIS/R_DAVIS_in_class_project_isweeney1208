@@ -81,6 +81,8 @@ surveys_avg_weight <- surveys %>%
 
 ?mutate
 
-  surveys_avg_weight 
-    
+surveys_avg_weight <- surveys_avg_weight %>% 
+  mutate(above_average = avg_weight < weight)
+
+surveys_avg_weight
             
