@@ -5,8 +5,8 @@ head(tail)
 dim(tail)
 
 # join_function (data fram a, data frame b, how to join)
-# inner_join(data frame a, data frame b, common id)
-#inner_join only keeps records that are in both data frames
+# inner_join(data frame a, data frame b, common id) 
+#inner_join only keeps rows that are in both data frames i.e records_id
 
 surveys <- read.csv("data/portal_data_joined.csv")
 dim(inner_join(x = surveys, y = tail, by = 'record_id'))
@@ -31,3 +31,5 @@ dim(surveys_right_joined)
 
 surveys_full_joined <- full_join(x = surveys, y = tail)
 dim(surveys_full_joined)
+
+
