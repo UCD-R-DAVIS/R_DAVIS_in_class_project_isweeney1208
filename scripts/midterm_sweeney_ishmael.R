@@ -31,6 +31,6 @@ running_laps <- laps %>%
     minutes_per_mile >= 8 ~ "slow"
   ))
 
-  
+#all I could do in an hour, I am slow :( 
 
 
