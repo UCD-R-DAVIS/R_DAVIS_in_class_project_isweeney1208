@@ -39,6 +39,9 @@ surveys %>%
     weight >= 48.00 ~ "large"
   ))
 
+surveys$weight_cat <- if_else(surveys$weight_cat
+   
+
   
 
          
