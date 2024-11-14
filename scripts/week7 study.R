@@ -167,3 +167,24 @@ panel_plot <- plot_grid(plot.cars, plot.iris, plot.diamonds,
 
 install.packages("cowplot")
 library(cowplot)
+
+# make a few plots:
+plot.diamonds <- ggplot(diamonds, aes(clarity, fill = cut)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle=70, vjust=0.5))
+#plot.diamonds
+
+plot.cars <- ggplot(mpg, aes(x = cty, y = hwy, colour = factor(cyl))) + 
+  geom_point(size = 2.5)
+#plot.cars
+
+plot.iris <- ggplot(data=iris, aes(x=Sepal.Length, y=Petal.Length, fill=Species)) +
+  geom_point(size=3, alpha=0.7, shape=21)
+#plot.iris
+
+# use plot_grid
+panel_plot <- plot_grid(plot.cars, plot.iris, plot.diamonds, labels=c("A", "B", "C"), ncol=2, nrow = 2)
+
+panel_plot
+
+
