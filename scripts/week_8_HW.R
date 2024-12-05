@@ -32,5 +32,11 @@ mloa2 = mloa %>%
     datetimeLocal = with_tz(datetime, tz = "Pacific/Honolulu")
   )
 
-      
+
+
+head(mloa)
+
+
+mloa %>% 
+  filter(windSpeed_m_s > 0 & temp_C_2m >0 & rel_humid >0)
        
